@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CekDokWeb Meeting</title>
+    <script src="https://8x8.vc/vpaas-magic-cookie-ab7c0b64fd4e4a8aa480d639c05dea31/external_api.js" async></script>
+    <style>
+      html, body, #jaas-container { height: 100%; margin: 0; }
+      .top-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #2c2c2c; /* Background color: dark gray */
+        padding: 0;
+      }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #007BFF; /* Background color: blue */
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .nav-menu {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        background-color: #333333; /* Background color: gray */
+        padding: 10px;
+        margin-top: 10px;
+        box-sizing: border-box;
+      }
+      .topbar a, .nav-menu a {
+        color: #ffffff; /* Text color: white */
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+      }
+      #waktu {
+        color: #ffffff; /* Text color: white */
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+      }
+      @media (max-width: 600px) {
+        .topbar, .nav-menu {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      window.onload = () => {
+        const api = new JitsiMeetExternalAPI("8x8.vc", {
+          roomName: "vpaas-magic-cookie-ab7c0b64fd4e4a8aa480d639c05dea31/CekDokKonsul 1",
+          parentNode: document.querySelector('#jaas-container'),
+          // Make sure to include a JWT if you intend to record,
+          // make outbound calls or use any other premium features!
+          // jwt: "your-jwt-token-here"
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="top-container">
+      <div class="topbar">
+        <div>
+          <a href="tel:+62000000000">+62 000-000-000</a>
+          <a href="mailto:support@cekdokweb.com">support@cekdokweb.com</a>
+        </div>
+        <div id="waktu">Tanggal: 1/9/2024 | Waktu: 17.47.42</div>
+      </div>
+      <div class="nav-menu">
+        <a href="#">Join Meeting</a>
+        <a href="#">Homes</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+    <div id="jaas-container"></div>
+  </body>
+</html>
